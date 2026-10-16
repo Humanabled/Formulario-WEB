@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <html lang="ca">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Formulari de registre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+ <body>
+    <main>
+        <h1>Formulari de registre</h1>
+        <p class="introduccio">Omple el formulari per registrar-te a l'activitat</p>
+        
+        <fieldset>
+            <legend>Informació personal</legend>
+        <form action="https://m0373ac3.free.nf/processa.php" method="get">
+            <!-- Camps del formulari -->
+         <label for="nom">Nom:</label>
+         <input type="text" id="nom" name="nom" required><br><br>
+         <label for="cognoms">Cognoms:</label>
+         <input type="text" id="cognoms" name="cognoms" required><br><br>
+          <label for="email">Correu electrònic:</label>
+          <input type="email" id="email" name="email" required><br><br>
+         <label for="password">Contrasenya:</label>
+         <input type="password" id="password" name="password" required><br><br>
+         <label for="edat">Edat:</label>
+         <input type="number" id="edat" name="edat" min="14" max="100" required><br><br>
+         <label for="data_naixement">Data de naixement:</label>
+         <input type="date" id="data_naixement" name="data_naixement" required><br><br>
+         <label for="telefon">Telèfon:</label>
+         <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" required><br><br>
+         <label for="pagina">Pàgina web:</label>
+         <input type="url" id="pagina" name="pagina"><br><br>
+       
+
+        <fieldset>
+            <legend>Preferencies</legend>
+            <label color="color">Color preferit:</label>
+            <input type="color" id="color" name="color" defaultValue="#0d6efd"><br><br>
+            <label question="question">Cuant t'agrada programar?</label>
+            <input type="range" id="question" name="question" min="0" max="10"><br><br>
+            <label radio="radio">1. Sexe:</label><br>
+            <input type="radio" id="Home" name="sexe" value="Home"><label for="Home">Home</label><br>
+            <input type="radio" id="Dona" name="sexe" value="Dona"><label for="Dona">Dona</label><br>
+            <input type="radio" id="altres" name="sexe" value="altres"><label for="altres">Altres</label><br><br>
+            <label checkbox="checkbox">2. Aficions:</label><br>
+            <input type="checkbox" id="programacio" name="aficions" value="programacio"><label for="programacio">Programacio</label><br>
+            <input type="checkbox" id="videojocs" name="aficions" value="videojocs"><label for="videojocs">Videojocs</label><br>
+            <input type="checkbox" id="Esports" name="aficions" value="esports"><label for="esports">Esports</label><br>
+            <input type="checkbox" id="Musica" name="Musica" value="Musica"><label for="Musica">Música</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Localització</legend>
+            <label for="pais">Pais:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Selecciona un país</option>
+                <option value="Espanya">Espanya</option>
+                <option value="França">França</option>
+                <option value="Itàlia">Itàlia</option>
+                <option value="Alemanya">Alemanya</option>
+                <option value="Regne Unit">Regne Unit</option>
+
+                <label datalist="ciutats">Ciutat:</label>
+                <input list="ciutats" id="ciutat" name="ciutat" required>
+                <datalist id="ciutats">
+                    <option value="Barcelona">
+                    <option value="Madrid">
+                    <option value="València">
+                    <option value="Sevilla">
+                    <option value="Bilbao">
+        </fieldset>
+
+        <fieldset>
+            <legend>Informació adicional</legend>
+            <label textarea="textarea">Comentaris:</label><br>
+            <textarea id="comentaris" name="comentaris" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Enviar">
+            <label file="file">Adjunta un fitxer:</label>
+            <input type="file" id="fitxer" name="fitxer"><br><br>
+            <label checkbox="checkbox">Accepto els termes i condicions:</label>
+            <input type="checkbox" id="accepto" name="accepto" required><br><br>
+        </fieldset>
+
+
+        <fieldset>
+            <label submit="submit">Envia el formulari:</label>
+            <input type="submit" value="Enviar">
+            <label submit="reset">Neteja el formulari:</label>
+            <input type="reset" value="Neteja">
+
+        </fieldset>
+        </form>
+    </main>
+ </body>
+</html>
